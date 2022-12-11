@@ -26,7 +26,7 @@ $(function () {
                 // --- CHANGE THIS LINE TO YOUR OWN API GATEWAY  -------- 
                 url: "https://ovx08scdo8.execute-api.eu-west-1.amazonaws.com/default/mylambdafunc",
                 // ------------------------------------------------------  
-                type: "ANY",
+                type: "POST",
                 data: JSON.stringify(json),
                 cache: false,
                 success: function () {
