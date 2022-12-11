@@ -35,32 +35,8 @@ def lambda_handler(event, context):
     
     # --- Insert your code here ---
     #rid = None
-    import json
-    import boto3
-    import numpy as np
 
-
-    def lambda_handler(event, context):
-    # TODO implement
-    dynamodb = boto3.resource('dynamodb')
-    
-    table = dynamodb.Table('portfolio_data_table')
-    
-    table.put_item(
-    Item={
-        'ResponsesID': 0,
-        'Cell': 648458739,
-        'Email': 'ezethugaxo@gmail.com',
-        'Message': 'Hello',
-        'Name': 'Ezethu Gaxo'
-    })
-    # <--- Replace this value with your code.
-    # -----------------------------
-    
-    # ** Instantiate the DynamoDB service with the help of the boto3 library **
-    
-    # --- Insert your code here ---
-    dynamodb = dynamodb = boto3.resource('dynamodb') # <--- Replace this value with your code.
+    dynamodb = boto3.resource('dynamodb') # <--- Replace this value with your code.
     # -----------------------------
     
     # Instantiate the table. Remember pass the name of the DynamoDB table created in step 4
@@ -71,11 +47,13 @@ def lambda_handler(event, context):
     # Complete the below code so that the appropriate 
     # incoming data is sent to the matching column in your DynamoDB table
     # --- Insert your code here ---
-    db_response = table.put_item(Item={'ResponsesID': 0, # <--- Insert the correct variable
-                        'Name': Ezethu Gaxo, # <--- Insert the correct variable
-                        'Email': ezethugaxo@gmail.com, # <--- Insert the correct variable
-                        'Cell': 0648458739, # <--- Insert the correct variable
-                        'Message': Hi # <--- Insert the correct variable
+    db_response = table.put_item(
+        Item={
+            'ResponsesID': 0, # <--- Insert the correct variable
+            'Name': dec_dict['name'], # <--- Insert the correct variable
+            'Email': dec_dict['email'], 
+            'Cell': dec_dict['phone'], 
+            'Message': dec_dict['message'] # <--- Insert the correct variable
     })
     # -----------------------------
 
