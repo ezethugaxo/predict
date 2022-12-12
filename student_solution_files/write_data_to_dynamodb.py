@@ -34,7 +34,7 @@ def lambda_handler(event, context):
     # on a unique value to prevent errors when writing to DynamoDB. **
     
     # --- Insert your code here ---
-    rid = ResponsesID <> :ResponsesID
+    #rid = ResponsesID <> :ResponsesID
 
     dynamodb = boto3.resource('dynamodb') # <--- Replace this value with your code.
     # -----------------------------
