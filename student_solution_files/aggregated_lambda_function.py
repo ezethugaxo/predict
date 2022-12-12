@@ -202,7 +202,7 @@ def key_phrase_finder(list_of_important_phrases, list_of_extracted_phrases):
 
 # Lambda function orchestrating the entire predict logic
 def lambda_handler(event, context):
-    
+    dynamodb = boto3.resource('dynamodb')
     # Perform JSON data decoding 
     body_enc = event['body']
     dec_dict = json.loads(base64.b64decode(body_enc))
